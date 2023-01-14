@@ -4,16 +4,20 @@ import lombok.Getter;
 
 @Getter
 public enum ProblemType {
-    ENTIDADE_NAO_ENCONTRADA("/entidade-nao-encontrada", "Entidade não encontrada"),
+    RECURSO_NAO_ENCONTRADO("/recurso-nao-encontrado", "Recurso não encontrado"),
     MENSAGEM_INCOMPREENSIVEL("/mensagem-incompreensivel", "Mensagem incompreensivo"),
     ENTIDADE_EM_USO("/entidade-em-uso", "Entidade em uso"),
-    ERRO_NEGOCIO("/erro-negocio", "Violação de regra de negócio");
+    ERRO_NEGOCIO("/erro-negocio", "Violação de regra de negócio"),
+    PARAMETRO_INVALIDO("/parametro-invalido", "Parâmetro inválido"),
 
-    private String title;
+    ERRO_DE_SISTEMA("/erro-de-sistema", "Erro de sistema");
+
     private String uri;
+    private String title;
 
-    ProblemType(String title, String uri) {
-        this.title = title;
+
+    ProblemType( String uri,String title) {
         this.uri = "https://senafood.com.br" + uri;
+        this.title = title;
     }
 }
