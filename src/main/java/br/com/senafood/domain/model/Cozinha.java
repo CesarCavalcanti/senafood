@@ -1,6 +1,6 @@
 package br.com.senafood.domain.model;
 
-import br.com.senafood.Groups;
+import br.com.senafood.core.validation.Groups;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
